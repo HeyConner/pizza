@@ -73,51 +73,5 @@ $(".remove-button").click(function(e) {
     e.preventDefault();
     pizza.removeTopping($(this).data("topping"));
   });
-// $("#sausage_add").click(pizza.addTopping("sas"));
-// //pepperoni button
-// $("#pepperoni_add").click(pizza.addTopping("pep"));
-// //canadian bacon button
-// $("#canadian_add").click(pizza.addTopping("can"));
-// //chicken button
-// $("#chicken_add").click(pizza.addTopping("chi"));
-// //ground beef button
-// $("#ground_add").click(pizza.addTopping("grb"));
-// //bacon button
-// $("#bacon_add").click(pizza.addTopping("bac"));
-// //mozzerella button
-// $("#mozzerella_add").click(pizza.addTopping("moz"));
-// //cheddar button
-// $("#cheddar_add").click(pizza.addTopping("chd"));
-// //parmasean button
-// $("#parmasean_add").click(pizza.addTopping("pam"));
-// //swiss button
-// $("#swiss_add").click(pizza.addTopping("sws"));
-// //olive button
-// $("#olive_add").click(pizza.addTopping("olive"));
-// //pineapple button
-// $("#pineapple_add").click(pizza.addTopping("pin"));
-// //tomato button
-// $("#tomato_add").click(pizza.addTopping("tom"));
-// //mushroom button
-// $("#mushroom_add").click(pizza.addTopping("mus"));
-// //Roated Red Pepper button
-// $("#redpepper_add").click(pizza.addTopping("rrp"));
-// //jalepeno button
-// $("#jalepeno_add").click(pizza.addTopping("jal"));
-// //ranch button
-// $("#ranch_add").click(pizza.addTopping("rch"));
-// //sweet chili button
-// $("#sweetchili_add").click(pizza.addTopping("sch"));
-// // marinara button
-// $("#marinara_add").click(pizza.addTopping("mar"));
-// //small size
-// $("#small_add").click(pizza.changeSize(0));
-// //medium
-// $("#medium_add").click(pizza.changeSize(1));
-// //large
-// $("#large_add").click(pizza.changeSize(2));
-// //x-large
-// $("#xtralarge_add").click(pizza.changeSize(3));
-
 
 });
