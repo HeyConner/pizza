@@ -4,6 +4,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script></body>
     <title>Pizza Girl.</title>
   </head>
   <body>
@@ -22,35 +23,194 @@
             <label for="userQuantity">Select your toppings (pizza's get 3, any extra are $1.00 per)</label>
 
             <h4>Meats</h4>
-            <button id="pepperoni_add" type="submit" class="btn btn-danger">Pepperoni</button>
-            <button id="sausage_add" type="btn" class="btn btn-danger">Sausage</button>
-            <button id="canadian_add" type="btn" class="btn btn-danger">Canadian Bacon</button>
-            <button id="ground_add" type="btn" class="btn btn-danger">Ground Beef</button>
-            <button id="bacon_add" type="btn" class="btn btn-danger">Bacon</button>
+            <div class="row">
+              <div class="col-md-2">
+                <button id="pepperoni_add" type="submit" class="btn btn-danger add-button" data-topping="pep">Pepperoni  +</button>
+              </div>
+              <div class="col-md-1" id="pep_quantity">0</div>
+              <div class="col-md-2">
+                <button id="pepperoni_remove" type="submit" class="btn btn-danger remove-button" data-topping="pep">Pepperoni -</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <button id="sausage_add" type="btn" class="btn btn-danger add-button" data-topping="sas">Sausage</button>
+              </div>
+              <div class="col-md-1" id="sas_quantity">0</div>
+              <div class="col-md-2">
+                <button id="sausage_remove" type="submit" class="btn btn-danger remove-button" data-topping="sas">Sausage -</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <button id="canadian_add" type="btn" class="btn btn-danger add-button" data-topping="can">Canadian Bacon </button>
+              </div>
+              <div class="col-md-1" id="can_quantity">0</div>
+              <div class="col-md-2">
+                <button id="canadian_remove" type="submit" class="btn btn-danger remove-button" data-topping="can">Canadian Bacon -</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <button id="ground_add" type="btn" class="btn btn-danger bt add-button" data-topping="grb">Ground Beef</button>
+              </div>
+              <div class="col-md-1" id="grb_quantity">0</div>
+              <div class="col-md-2">
+                <button id="ground_remove" type="submit" class="btn btn-danger remove-button" data-topping="grb">Ground Beef -</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <button id="bacon_add" type="btn" class="btn btn-danger add-button" data-topping="bac">Bacon</button>
+              </div>
+              <div class="col-md-1" id="bac_quantity">0</div>
+            <button id="bacon_remove" type="submit" class="btn btn-danger remove-button" data-topping="bac">Bacon -</button>
+            </div>
+          </div>
             <h4>Cheeses</h4>
-            <button id="mozzerella_add" type="btn" class="btn btn-warning">Mozzerella</button>
-            <button id="cheddar_add" type="btn" class="btn btn-warning">Cheddar</button>
-            <button id="canadian_add" type="btn" class="btn btn-warning">Parmasean</button>
-            <button id="canadian_add" type="btn" class="btn btn-warning">Swiss</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="mozzerella_add" type="btn" class="btn btn-warning add-button" data-topping="moz">Mozzerella</button>
+            </div>
+            <div class="col-md-1" id="moz_quantity">0</div>
+              <button id="mozzerella_remove" type="submit" class="btn btn-warning remove-button" data-topping="moz">Mozzerella -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="cheddar_add" type="btn" class="btn btn-warning add-button" data-topping="chd">Cheddar</button>
+            </div>
+            <div class="col-md-1" id="chd_quantity">0</div>
+              <button id="cheddar_remove" type="submit" class="btn btn-warning remove-button" data-topping="chd">Cheddar -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="parmasean_add" type="btn" class="btn btn-warning add-button" data-topping="pam">Parmasean</button>
+            </div>
+            <div class="col-md-1" id="pam_quantity">0</div>
+              <button id="parmasean_remove" type="submit" class="btn btn-warning remove-button" data-topping="pam">Parmasean -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="swiss_add" type="btn" class="btn btn-warning add-button" data-topping="sws">Swiss</button>
+            </div>
+            <div class="col-md-1" id="sws_quantity">0</div>
+              <button id="swiss_remove" type="submit" class="btn btn-warning remove-button" data-topping="sws">Swiss -</button>
+              </div>
+            </div>
+            <div class="row">
+              </div>
+            </div>
+
             <h4>Veggies</h4>
-            <button id="olive_add" type="btn" class="btn btn-success">Olives</button>
-            <button id="tomato_add" type="btn" class="btn btn-success">Tomatos</button>
-            <button id="pineapple_add" type="btn" class="btn btn-success">Pineapple</button>
-            <button id="mushroom_add" type="btn" class="btn btn-success">Mushroom</button>
-            <button id="jalepeno_add" type="btn" class="btn btn-success">Jalepeno</button>
-            <button id="redpepper_add" type="btn" class="btn btn-success">Roasted Red Pepper</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="olive_add" type="btn" class="btn btn-success add-button" data-topping="oli">Olives</button>
+            </div>
+            <div class="col-md-1" id="oli_quantity">0</div>
+              <button id="olive_remove" type="submit" class="btn btn-success remove-button" data-topping="oli">Olives -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="tomato_add" type="btn" class="btn btn-success add-button" data-topping="tom">Tomatos</button>
+            </div>
+            <div class="col-md-1" id="tom_quantity">0</div>
+              <button id="tomato_remove" type="submit" class="btn btn-success remove-button" data-topping="tom">Tomatos-</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="pineapple_add" type="btn" class="btn btn-success add-button" data-topping="pin">Pineapple</button>
+            </div>
+            <div class="col-md-1" id="pin_quantity">0</div>
+              <button id="pineapple_remove" type="submit" class="btn btn-success remove-button" data-topping="pin">Pineapple -</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="mushroom_add" type="btn" class="btn btn-success add-button" data-topping="mus">Mushroom</button>
+            </div>
+            <div class="col-md-1" id="mus_quantity">0</div>
+              <button id="mushroom_remove" type="submit" class="btn btn-success remove-button" data-topping="mus">Mushroom -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="jalepeno_add" type="btn" class="btn btn-success add-button" data-topping="jal">Jalepeno</button>
+            </div>
+            <div class="col-md-1" id="jal_quantity">0</div>
+              <button id="jalepeno_remove" type="submit" class="btn btn-success remove-button" data-topping="jal">Jalepenos -</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="redpepper_add" type="btn" class="btn btn-success add-button" data-topping="rrp">Roasted Red Pepper</button>
+            </div>
+          <div class="col-md-1" id="rrp_quantity">0</div>
+              <button id="redpepper_remove" type="submit" class="btn btn-success remove-button" data-topping="rrp">Roasted Red Pepper-</button>
+              </div>
+            </div>
           <h4>Sauces</h4>
-            <button id="ranch_add" type="btn" class="btn btn-info">Ranch</button>
-            <button id="sweetchili_add" type="btn" class="btn btn-info">Sweet Chili</button>
-            <button id="Marinara_add" type="btn" class="btn btn-info">Marinara</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="ranch_add" type="btn" class="btn btn-info add-button" data-topping="rch">Ranch</button>
+            </div>
+            <div class="col-md-1" id="rch_quantity">0</div>
+              <button id="ranch_remove" type="submit" class="btn btn-info remove-button" data-topping="rch">Ranch -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="sweetchili_add" type="btn" class="btn btn-info add-button" data-topping="sch">Sweet Chili</button>
+            </div>
+            <div class="col-md-1" id="sch_quantity">0</div>
+              <button id="sweetchili_remove" type="submit" class="btn btn-info remove-button" data-topping="sch">Sweet Chili -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="marinara_add" type="btn" class="btn btn-info add-button" data-topping="mar">Marinara</button>
+            </div>
+            <div class="col-md-1" id="mar_quantity">0</div>
+              <button id="marinara_remove" type="submit" class="btn btn-info remove-button" data-topping="mar">Marinara -</button>
+              </div>
+            </div>
+
           <h4>Sizes</h4>
-            <button id="small_add" type="btn" class="btn btn-default">Small</button>
-            <button id="medium_add" type="btn" class="btn btn-default">Medium</button>
-            <button id="Large_add" type="btn" class="btn btn-default">Large</button>
-            <button id="xtralarge_add" type="btn" class="btn btn-default">Xtra-Large</button>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="small_add" type="btn" class="btn btn-default add-button" data-topping=0>Small</button>
+            </div>
+            <div class="col-md-1" id="0_quantity">0</div>
+              <button id="small_remove" type="submit" class="btn btn-default remove-button" data-topping=0>Small -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="medium_add" type="btn" class="btn btn-default add-button" data-topping=1>Medium</button>
+            </div>
+            <div class="col-md-1" id="1_quantity">0</div>
+              <button id="medium_remove" type="submit" class="btn btn-default remove-button" data-topping=1>Medium -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="large_add" type="btn" class="btn btn-default add-button" data-topping=2>Large</button>
+            </div>
+            <div class="col-md-1" id="2_quantity">0</div>
+              <button id="large_remove" type="submit" class="btn btn-default remove-button" data-topping=2>Large -</button>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-2">
+              <button id="xtralarge_add" type="btn" class="btn btn-default add-button" data-topping=3>XtraLarge</button>
+            </div>
+            <div class="col-md-1" id="3_quantity">0</div>
+              <button id="xtralarge_remove" type="submit" class="btn btn-default remove-button" data-topping=3>XtraLarge -</button>
+              </div>
+            </div>
+
 
 
           </div>
         </form>
-        <script src="js/scripts.js"></script></body>
 </html>
