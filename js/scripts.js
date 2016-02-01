@@ -25,22 +25,22 @@
   sch: {name: "Sweet Chili Ranch"},
   }
 var size = {
-  0: {name: "Small"}
-  1: {name: "Medium"}
-  2: {name: "Large"}
-  3: {name: "Xtra-Large"}
+  0: {name: "Small"},
+  1: {name: "Medium"},
+  2: {name: "Large"},
+  3: {name: "Xtra-Large"},
 }
   function Pizza(size, toppings) {
     this.toppings = toppings;
     this.size = size;
-  }
+  };
 
   Pizza.prototype.price = function() {
     var price = 0;
     price += 6+(this.size*2);
     price += this.toppings.length;
     return price;
-  }
+  };
   //sausage button
 $("#sausage_add").click(pizza.addTopping("sas"));
 //pepperoni button
@@ -73,30 +73,28 @@ $("#mushroom_add").click(pizza.addTopping("mus"));
 $("#redpepper_add").click(pizza.addTopping("rrp"));
 //jalepeno button
 $("#jalepeno_add").click(pizza.addTopping("jal"));
+//ranch button
+$("#ranch_add").click(pizza.addTopping("rch"));
+//sweet chili button
+$("#sweetchili_add").click(pizza.addTopping("sch"));
+// marinara button
+$("#marinara_add").click(pizza.addTopping("mar"));
+//small size
+$("#small_add").click(pizza.changeSize(0));
+//medium
+$("#medium_add").click(pizza.changeSize(1));
+//large
+$("#large_add").click(pizza.changeSize(2));
+//x-large
+$("#xtralarge_add").click(pizza.changeSize(3));
 
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
-
-$("#pepperoni_add").click(pizza.addTopping("pep"));
 
 
 function addTopping(topping) {
   this.toppings[topping].quantity += 1;
+};
+function addSize(Size) {
+  this.size[size].quantity += 1;
 }
 
   var pizza = new Pizza(0, {}, "");
