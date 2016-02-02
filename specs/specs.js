@@ -1,18 +1,14 @@
-describe('updateQuantity', function() {
-  it("is is true for the user inputting any of the desired quantitys available", function() {
-      expect(toppings("#")).should.be("#");
+describe("Pizza", function() {
+  it("allows you to add toppings", function() {
+    var testPizza = new Pizza(1, {pep: {name: "Pepperoni", quantity: 0}}, "Test Pizza")
+    testPizza.addTopping("pep");
+    expect(testPizza.toppings.pep.quantity).to.equal(1);
+
   });
-  it("is false for toppings undefined in toppings")
+
+  it("allows you to remove toppings", function() {
+    var testPizza = new Pizza (1, {pep: {name:"Pepperoni", quantity: 1}}, "Test Pizza")
+    testPizza.removeTopping("pep");
+    expect(testPizza.toppings.pep.quantity).to.equal(0);
+  });
 });
-describe('changeSize', function() {
-  it("is is true for the user inputting any of the desired sizes available", function() {
-      expect(size("0")).should.be("0");
-  });
-  it("is false for toppings undefined in toppings")
-})
-describe('removeTopping', function() {
-  it("is is true for the user removing any of the previously desired toppings available", function() {
-      expect(toppings("#")).should.be(this.topping);
-  });
-  it("is false for toppings undefined in toppings")
-})
