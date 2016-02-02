@@ -1,11 +1,10 @@
-# pizza
 
 Vancouver Pizza Girl
-This Website will allow you to build a custom pizza
+This Website will Allow you to build your own pizza using the buttons provided
 
-Usage
-click on the buttons and see your toppings
+Usage:
+Click on the buttons to select the number of each toppings you want on your pizza.
 
-credits
+Credits:
 
-Conner Belvin
+Conner Belvin.
