@@ -31,17 +31,18 @@ var size = {
 }
 function Pizza(size, toppings) {
   this.toppings = toppings;
-  this.size = size;
+  this.pizzaSize = size;
   this.quantity = 1;
 }
 
 Pizza.prototype.price = function() {
   var price = 0;
-  price += 6+(this.size*2);
+  price += 6+(this.pizzaSize*2);
   var toppingsPrice = 0;
   for (topping in this.toppings) {
     toppingsPrice += pizza.toppings[topping].quantity;
   }
+
   toppingsPrice -= 7; // They get 7 free toppings
   if (toppingsPrice < 0) {
     toppingsPrice = 0;
@@ -68,8 +69,11 @@ Pizza.prototype.removeTopping = function(topping) {
 }
 
 Pizza.prototype.changeSize = function(size) {
-  this.size = size;
+  size = parseInt(size);
+  this.pizzaSize = size;
   changePrice();
+  $(".change-size").removeClass("active");
+$("#size"+size).addClass("active");
 }
 Pizza.prototype.changeQuantity = function(quantity) {
   quantity = parseInt(quantity);
@@ -105,5 +109,10 @@ $("#submit-quantity").click(function(e) {
   e.preventDefault();
   pizza.changeQuantity($("#user-quantity").val());
 });
+$(".change-size").click(function(e) {
+  e.preventDefault();
+  pizza.changeSize($(this).data("size"));
+
+})
 
 });
